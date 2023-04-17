@@ -1,0 +1,37 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" ngModel name="name" required class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="decsription">Description</label>
+            <input type="text" id="decsription" ngModel name="decsription" required class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" id="price" ngModel name="price" required class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+            <button type="submit" class="btn btn-success" [disabled]="!form.valid">Save</button> &nbsp;&nbsp;
+            <button class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
